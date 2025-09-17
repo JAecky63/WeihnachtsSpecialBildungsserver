@@ -12,28 +12,24 @@
       padding: 20px;
       line-height: 1.6;
     }
-    h1, h2 {
+    h1, h2, h3 {
       color: gold;
     }
-    code {
+    code, pre {
       background-color: #1e4d6b;
-      padding: 4px 8px;
+      padding: 6px 10px;
       border-radius: 4px;
       font-family: monospace;
+      display: block;
+      white-space: pre-wrap;
     }
     .icon {
       font-size: 30px;
       margin-right: 10px;
     }
-    table {
-      margin-top: 10px;
-      border-collapse: collapse;
-      width: 100%;
-    }
-    th, td {
-      border: 1px solid white;
-      padding: 8px;
-      text-align: center;
+    ul {
+      list-style-type: square;
+      margin-left: 20px;
     }
   </style>
 </head>
@@ -42,55 +38,102 @@
 
   <h2>1. Grundstruktur einer HTML-Seite</h2>
   <p>Jede HTML-Seite beginnt mit einem festen Gerüst:</p>
-  <code>&lt;!DOCTYPE html&gt;<br>
-  &lt;html lang="de"&gt;<br>
-  &nbsp;&nbsp;&lt;head&gt;<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Meine Weihnachtskarte&lt;/title&gt;<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="style.css"&gt;<br>
-  &nbsp;&nbsp;&lt;/head&gt;<br>
-  &nbsp;&nbsp;&lt;body&gt;<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Inhalt --&gt;<br>
-  &nbsp;&nbsp;&lt;/body&gt;<br>
-  &lt;/html&gt;
-  </code>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="de"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Meine Weihnachtskarte&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Inhalt --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
   <h2>2. Verwendung von Stylesheets</h2>
   <p>Das Stylesheet <code>style.css</code> sorgt für Farben, Schriftarten und Layout. Es wird im <code>&lt;head&gt;</code> eingebunden:</p>
-  <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>
+  <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
   <p>Beispielhafte CSS-Regeln:</p>
-  <code>
-    body { background-color: #286b92; color: white; font-size: 30px; text-align: center; }<br>
-    p.gross { font-size: 36px; font-weight: bold; }
-  </code>
+  <pre><code>body {
+  background-color: #286b92;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+p.gross {
+  font-size: 36px;
+  font-weight: bold;
+}</code></pre>
 
   <h2>3. Einbindung von Icons mit FontAwesome</h2>
   <p>FontAwesome bietet viele schöne Symbole – z. B. 🎁 🎄 🛷</p>
   <p>Einbindung im <code>&lt;head&gt;</code>:</p>
-  <code>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;</code>
+  <pre><code>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;</code></pre>
   <p>Verwendung im <code>&lt;body&gt;</code>:</p>
-  <code>&lt;i class="fa-solid fa-gift" style="font-size: 100px; color: red;"&gt;&lt;/i&gt;</code>
+  <pre><code>&lt;i class="fa-solid fa-gift" style="font-size: 100px; color: red;"&gt;&lt;/i&gt;</code></pre>
 
-  <h2>4. Tabellen verwenden</h2>
-  <p>Tabellen helfen, Inhalte nebeneinander darzustellen:</p>
-  <code>
-    &lt;table&gt;<br>
-    &nbsp;&nbsp;&lt;tr&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;i class="fa-solid fa-sleigh"&gt;&lt;/i&gt;&lt;/td&gt;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;i class="fa-solid fa-gift"&gt;&lt;/i&gt;&lt;/td&gt;<br>
-    &nbsp;&nbsp;&lt;/tr&gt;<br>
-    &lt;/table&gt;
-  </code>
+  <h2>4. Tabellen in HTML – einfach erklärt</h2>
+  <p>Eine Tabelle ist wie ein Stundenplan: Sie besteht aus <strong>Zeilen</strong> (horizontal) und <strong>Spalten</strong> (vertikal).
+  In HTML kannst du Tabellen verwenden, um Inhalte ordentlich nebeneinander darzustellen – zum Beispiel zwei Weihnachts-Icons.</p>
+
+  <h3>🔧 Die wichtigsten Bausteine</h3>
+  <ul>
+    <li><code>&lt;table&gt;</code> – Start der Tabelle</li>
+    <li><code>&lt;tr&gt;</code> – Eine neue Zeile</li>
+    <li><code>&lt;td&gt;</code> – Eine Zelle mit Inhalt</li>
+    <li><code>&lt;th&gt;</code> – Eine Zelle mit Überschrift (fett)</li>
+  </ul>
+
+  <h3>🎄 Beispiel: Zwei Icons nebeneinander</h3>
+  <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;i class="fa-solid fa-sleigh" style="font-size: 100px; color: white;"&gt;&lt;/i&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+      &lt;i class="fa-solid fa-gift" style="font-size: 100px; color: red;"&gt;&lt;/i&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+  <p>🔍 Das bedeutet: Eine Zeile mit zwei Zellen – in jeder steckt ein Icon.</p>
+
+  <h3>📅 Beispiel: Weihnachtszeitplan</h3>
+  <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Datum&lt;/th&gt;
+    &lt;th&gt;Aktivität&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;24.12.&lt;/td&gt;
+    &lt;td&gt;Geschenke einpacken&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;25.12.&lt;/td&gt;
+    &lt;td&gt;Familienessen&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+  <p>🔍 Hier gibt es eine Überschriftenzeile und zwei Zeilen mit Daten.</p>
+
+  <h3>🧠 Merktipp</h3>
+  <ul>
+    <li><strong>T</strong> wie <strong>Table</strong> = Tabelle</li>
+    <li><strong>TR</strong> wie <strong>Table Row</strong> = Zeile</li>
+    <li><strong>TD</strong> wie <strong>Table Data</strong> = Zelle</li>
+    <li><strong>TH</strong> wie <strong>Table Header</strong> = Überschrift</li>
+  </ul>
 
   <h2>5. Links einfügen</h2>
   <p>Links verbinden deine Seiten oder führen zu externen Inhalten:</p>
-  <code>&lt;a href="WeihnachtsGruss.html" target="_blank"&gt;HIER&lt;/a&gt;</code>
+  <pre><code>&lt;a href="WeihnachtsGruss.html" target="_blank"&gt;HIER&lt;/a&gt;</code></pre>
   <p>Du kannst auch Icons als Link verwenden:</p>
-  <code>
-    &lt;a href="WeihnachtsGruss_one.html"&gt;<br>
-    &nbsp;&nbsp;&lt;i class="fa-solid fa-sleigh"&gt;&lt;/i&gt;<br>
-    &lt;/a&gt;
-  </code>
+  <pre><code>&lt;a href="WeihnachtsGruss_one.html"&gt;
+  &lt;i class="fa-solid fa-sleigh"&gt;&lt;/i&gt;
+&lt;/a&gt;
+</code></pre>
 
   <h2>6. Quellcode ansehen</h2>
   <p>Mit <strong>Rechtsklick → „Seitenquelltext anzeigen“</strong> oder <strong>STRG + U</strong> kannst du den HTML-Code jeder Seite sehen und daraus lernen.</p>
