@@ -37,6 +37,7 @@ table {
 }
 td {
   padding: 20px;
+  width: 50%;
 }
 tr {
   vertical-align: top;
