@@ -29,3 +29,15 @@ p {
   margin: 20px 0;
   color: white;
 }
+
+table {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+td {
+  padding: 20px;
+}
+tr {
+  vertical-align: top;
+} 
