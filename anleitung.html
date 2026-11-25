@@ -1,42 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <title>Anleitung: HTML-Weihnachtskarte</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body {
-      background-color: #286b92;
-      color: white;
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      line-height: 1.6;
-    }
-    h1, h2, h3 {
-      color: gold;
-    }
-    code, pre {
-      background-color: #1e4d6b;
-      padding: 6px 10px;
-      border-radius: 4px;
-      font-family: monospace;
-      display: block;
-      white-space: pre-wrap;
-    }
-    .icon {
-      font-size: 30px;
-      margin-right: 10px;
-    }
-    ul {
-      list-style-type: square;
-      margin-left: 20px;
-    }
-  </style>
-</head>
-<body>
-  <h1><i class="fa-solid fa-snowflake icon"></i>HTML-Weihnachtskarte – Anleitung</h1>
+<html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Anleitung | Weihnachtswerkstatt</title><link rel="stylesheet" href="werkstatt.css"></head>
+<body><header><a href="index.html">❄ Weihnachtswerkstatt</a><span></span></header><main>
+  <h1>HTML-Weihnachtskarte – Anleitung</h1>
 
-  <h2>1. Grundstruktur einer HTML-Seite</h2>
+  <section class="lesson"><h2>1. Grundstruktur einer HTML-Seite</h2>
   <p>Jede HTML-Seite beginnt mit einem festen Gerüst:</p>
   <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="de"&gt;
@@ -51,7 +18,7 @@
 &lt;/html&gt;
 </code></pre>
 
-  <h2>2. Verwendung von Stylesheets</h2>
+  </section><section class="lesson"><h2>2. Verwendung von Stylesheets</h2>
   <p>Das Stylesheet <code>style.css</code> sorgt für Farben, Schriftarten und Layout. Es wird im <code>&lt;head&gt;</code> eingebunden:</p>
   <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
   <p>Beispielhafte CSS-Regeln:</p>
@@ -67,16 +34,16 @@ p.gross {
   font-weight: bold;
 }</code></pre>
 
-  <h2>3. Einbindung von Icons mit FontAwesome</h2>
+  </section><section class="lesson"><h2>3. Einbindung von Icons mit FontAwesome</h2>
   <p>FontAwesome bietet viele schöne Symbole – z. B. 🎁 🎄 🛷</p>
   <p>Einbindung im <code>&lt;head&gt;</code>:</p>
   <pre><code>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;</code></pre>
   <p>Verwendung im <code>&lt;body&gt;</code>:</p>
   <pre><code>&lt;i class="fa-solid fa-gift" style="font-size: 100px; color: red;"&gt;&lt;/i&gt;</code></pre>
 
-  <h2>4. Tabellen in HTML – einfach erklärt</h2>
+  </section><section class="lesson"><h2>4. Tabellen in HTML – einfach erklärt</h2>
   <p>Eine Tabelle ist wie ein Stundenplan: Sie besteht aus <strong>Zeilen</strong> (horizontal) und <strong>Spalten</strong> (vertikal).
-  In HTML kannst du Tabellen verwenden, um Inhalte ordentlich nebeneinander darzustellen – zum Beispiel zwei Weihnachts-Icons.</p>
+  Tabellen sind für Daten gedacht, zum Beispiel für einen Weihnachtszeitplan. Für die Anordnung von Icons eignet sich CSS Flexbox besser.</p>
 
   <h3>🔧 Die wichtigsten Bausteine</h3>
   <ul>
@@ -85,20 +52,6 @@ p.gross {
     <li><code>&lt;td&gt;</code> – Eine Zelle mit Inhalt</li>
     <li><code>&lt;th&gt;</code> – Eine Zelle mit Überschrift (fett)</li>
   </ul>
-
-  <h3>🎄 Beispiel: Zwei Icons nebeneinander</h3>
-  <pre><code>&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td&gt;
-      &lt;i class="fa-solid fa-sleigh" style="font-size: 100px; color: white;"&gt;&lt;/i&gt;
-    &lt;/td&gt;
-    &lt;td&gt;
-      &lt;i class="fa-solid fa-gift" style="font-size: 100px; color: red;"&gt;&lt;/i&gt;
-    &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-</code></pre>
-  <p>🔍 Das bedeutet: Eine Zeile mit zwei Zellen – in jeder steckt ein Icon.</p>
 
   <h3>📅 Beispiel: Weihnachtszeitplan</h3>
   <pre><code>&lt;table&gt;
@@ -126,18 +79,25 @@ p.gross {
     <li><strong>TH</strong> wie <strong>Table Header</strong> = Überschrift</li>
   </ul>
 
-  <h2>5. Links einfügen</h2>
+  </section><section class="lesson"><h2>5. Links einfügen</h2>
   <p>Links verbinden deine Seiten oder führen zu externen Inhalten:</p>
-  <pre><code>&lt;a href="WeihnachtsGruss.html" target="_blank"&gt;HIER&lt;/a&gt;</code></pre>
+  <pre><code>&lt;a href="WeihnachtsGruss.html" &gt;Weihnachtsgruß&lt;/a&gt;</code></pre>
   <p>Du kannst auch Icons als Link verwenden:</p>
   <pre><code>&lt;a href="WeihnachtsGruss_one.html"&gt;
   &lt;i class="fa-solid fa-sleigh"&gt;&lt;/i&gt;
 &lt;/a&gt;
 </code></pre>
 
-  <h2>6. Quellcode ansehen</h2>
+  </section><section class="lesson"><h2>6. Flexbox – Elemente nebeneinander anordnen</h2><p>Lege zwei Icons in einen gemeinsamen Container. Mit CSS kannst du festlegen, wie sie angeordnet werden.</p><pre><code>&lt;div class=&quot;motive&quot;&gt;
+  &lt;i class=&quot;fa-solid fa-sleigh&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;fa-solid fa-gift&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;</code></pre><pre><code>.motive {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}</code></pre></section><section class="lesson"><h2>7. Quellcode ansehen</h2>
   <p>Mit <strong>Rechtsklick → „Seitenquelltext anzeigen“</strong> oder <strong>STRG + U</strong> kannst du den HTML-Code jeder Seite sehen und daraus lernen.</p>
 
-  <p>Viel Spaß beim Gestalten deiner eigenen Weihnachtskarte! 🎅✨</p>
-</body>
-</html>
+  <p>Den CSS-Code der Beispielseiten kannst du auch <a href="style.css">direkt öffnen</a>.</p><div class="toolbar"><a href="WeihnachtsGruss.html">Beispielseite</a> · <a href="experimentieren.html">Weiter zur Experimentierwerkstatt →</a></div><p>Viel Spaß beim Gestalten deiner eigenen Weihnachtskarte! 🎅✨</p>
+</section></main><footer>Weihnachtswerkstatt · HTML und CSS · <a href="hinweise.html">Hinweise zu Material und Icons</a></footer></body></html>
